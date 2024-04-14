@@ -1,0 +1,3 @@
+defaults:
+  - base
+dirpath: ./outputs/nllb_madar/checkpoints

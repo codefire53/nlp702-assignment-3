@@ -1,0 +1,15 @@
+torch
+torchtext
+bitsandbytes
+accelerate
+transformers
+evaluate
+datasets
+peft
+sacrebleu
+rouge-score
+hydra-core
+sentencepiece
+wandb
+rich
+lightning

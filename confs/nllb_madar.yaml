@@ -1,0 +1,13 @@
+defaults:
+  - trainer: default
+  - models: nllb
+  - datasets: madar_nllb
+  - earlystopping: default
+  - checkpoint: nllb_madar
+  - loggers: nllb_madar
+  - lr_monitors: default
+do_train: true
+do_test: true
+inference_only: true
+output_path: ./dataset/predictions/nllb_madar_dev1.tsv
+checkpoint_file: ./outputs/nllb_madar/checkpoints/model-epoch=13-val_loss=8.95-val_bleu=48.56.ckpt

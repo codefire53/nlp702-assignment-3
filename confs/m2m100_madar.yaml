@@ -1,0 +1,12 @@
+defaults:
+  - trainer: default
+  - models: m2m100
+  - datasets: madar_m2m100
+  - earlystopping: default
+  - checkpoint: m2m100_madar
+  - loggers: m2m100_madar
+  - lr_monitors: default
+do_train: true
+do_test: true
+inference_only: true
+output_path: ./dataset/predictions/m2m100_madar_dev1.tsv
