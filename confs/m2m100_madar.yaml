@@ -8,5 +8,5 @@ defaults:
   - lr_monitors: default
 do_train: true
 do_test: true
-inference_only: true
+inference_only: false
 output_path: ./dataset/predictions/m2m100_madar_dev2.tsv
