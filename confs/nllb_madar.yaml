@@ -8,6 +8,6 @@ defaults:
   - lr_monitors: default
 do_train: true
 do_test: true
-inference_only: true
-output_path: ./dataset/predictions/nllb_madar_dev1.tsv
-checkpoint_file: ./outputs/nllb_madar/checkpoints/model-epoch=13-val_loss=8.95-val_bleu=48.56.ckpt
+inference_only: false
+output_path: ./dataset/predictions/nllb_madar_dev2.tsv
+checkpoint_file: ./outputs/nllb_madar/checkpoints/model-epoch=6-val_loss=8.99-val_bleu=16.19.ckpt

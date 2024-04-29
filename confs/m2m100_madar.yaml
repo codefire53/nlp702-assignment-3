@@ -9,4 +9,5 @@ defaults:
 do_train: true
 do_test: true
 inference_only: true
-output_path: ./dataset/predictions/m2m100_madar_dev1.tsv
+output_path: ./dataset/predictions/m2m100_madar_dev2.tsv
+checkpoint_file: ./outputs/m2m100_madar/checkpoints/model-epoch=18-val_loss=6.82-val_bleu=59.95.ckpt

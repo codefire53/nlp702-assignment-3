@@ -51,12 +51,11 @@ def main(cfg: DictConfig):
     
     if cfg.do_test:
         trainer = Trainer(accelerator="gpu", devices=1)
-        test_dataset = load_test_dataset(cfg.dataset)
         if cfg.do_train:
             # load best checkpoint
-            model = Seq2SeqModel.load_from_checkpoint(checkpoint_callback.best_model_path, model_config_params=cfg.models, tokenizer=model.tokenizer, adapter_config_params=cfg.adapters, output_path=model.output_path)
+            model = Seq2SeqModel.load_from_checkpoint(checkpoint_callback.best_model_path, model_config_params=cfg.models, tokenizer=model.tokenizer, output_path=model.output_path)
         elif hasattr(cfg, "checkpoint_file"):
-            model = Seq2SeqModel.load_from_checkpoint(cfg.checkpoint_file, model_config_params=cfg.models, tokenizer=model.tokenizer, adapter_config_params=cfg.adapters, output_path=model.output_path)
+            model = Seq2SeqModel.load_from_checkpoint(cfg.checkpoint_file, model_config_params=cfg.models, tokenizer=model.tokenizer, output_path=model.output_path)
         trainer.test(model, test_dataloader)
 
 if __name__ == "__main__":
