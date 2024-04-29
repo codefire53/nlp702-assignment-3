@@ -1,6 +1,6 @@
 defaults:
   - base
-train_files: ['./dataset/train/madar/train_madar#ar.tsv']
-val_files: ['./dataset/train/madar/val_madar#ar.tsv']
+train_files: ['./dataset/train/madar/train_standard_madar#ar.tsv']
+val_files: ['./dataset/train/madar/val_standard_madar#ar.tsv']
 test_files: ['./dataset/val/UBC_subtask3_dev_1#ar.txt']
 target_lang: ar
