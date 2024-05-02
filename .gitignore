@@ -162,5 +162,5 @@ cython_debug/
 **/.DS_Store
 logs/
 outputs/
-tokenizers_dir/
 wandb/
+lightning_logs/
