@@ -6,7 +6,8 @@ defaults:
   - checkpoint: m2m100_madar
   - loggers: m2m100_madar
   - lr_monitors: default
-do_train: true
+do_train: false
 do_test: true
 inference_only: false
 output_path: ./dataset/predictions/m2m100_madar_dev2.tsv
+checkpoint_file: ./outputs/m2m100_madar/checkpoints/m2m100.ckpt

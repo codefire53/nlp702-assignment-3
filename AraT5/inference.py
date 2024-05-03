@@ -11,9 +11,9 @@ def main():
     # load model
     model = AutoModelForSeq2SeqLM.from_pretrained(best_model)
     # load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(best_model)
+    tokenizer = AutoTokenizer.from_pretrained("UBC-NLP/AraT5-base")
     # read df without index
-    test_df = pd.read_csv("../dataset/NADI2024-Test_data_release/subtask3/subtask_3_test_unlabelled.tsv", sep="\t")
+    test_df = pd.read_csv("../dataset/val/NADI2024_subtask3_dev.tsv", sep="\t")
     dialect_sentences = test_df["source_da"].tolist()
     # predict with the model with batch size 8
     msa_sentences = []
@@ -24,7 +24,7 @@ def main():
         msa_sentences.extend(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 
     # save the predictions to txt file
-    with open("../dataset/NADI2024-Test_data_release/subtask3/NADI2024_subtask3_test_predictions_arat5.txt", "w") as f:
+    with open("../dataset/predictions/araT5_dev_new.txt", "w") as f:
         for sentence in msa_sentences:
             f.write(sentence + "\n")
 

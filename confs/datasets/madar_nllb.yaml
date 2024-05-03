@@ -2,5 +2,5 @@ defaults:
   - base
 train_files: ['./dataset/train/madar/train_flores200_madar#arz_Arab.tsv', './dataset/train/madar/train_flores200_madar#ars_Arab.tsv', './dataset/train/madar/train_flores200_madar#ajp_Arab.tsv']
 val_files: ['./dataset/train/madar/val_flores200_madar#arz_Arab.tsv', './dataset/train/madar/val_flores200_madar#ars_Arab.tsv', './dataset/train/madar/val_flores200_madar#ajp_Arab.tsv']
-test_files: ['./dataset/val/UBC_subtask3_dev_1#arz_Arab.txt','./dataset/val/UBC_subtask3_dev_1#ars_Arab.txt', './dataset/val/UBC_subtask3_dev_1#ajp_Arab.txt']
+test_files: ['./dataset/val/UBC_subtask3_dev2#arz_Arab.txt','./dataset/val/UBC_subtask3_dev2#ars_Arab.txt', './dataset/val/UBC_subtask3_dev2#ajp_Arab.txt']
 target_lang: arb_Arab
