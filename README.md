@@ -39,7 +39,7 @@ To run inference on dev set, run the following command:
 python AraT5/inference.py
 ```
 
-
+For Jasmine, please do check `NADI-Finetuning-LLM.ipynb` notebook. 
 # Evaluation 
 To evaluate your prediction you can just run like this
 ```
