@@ -78,20 +78,20 @@ class Seq2SeqModel(L.LightningModule):
         # Generate predictions
         generated_tokens = self.model.generate(input_ids=batch['input_ids'], attention_mask=batch['attention_mask'])
         decoded_preds = self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=True, forced_bos_token_id=self.tokenizer.lang_code_to_id[self.lang_code])
-        decoded_labels = self.tokenizer.batch_decode(batch['labels'], skip_special_tokens=True, forced_bos_token_id=self.tokenizer.lang_code_to_id[self.lang_code])
-        decoded_labels_bleu = [[label] for label in decoded_labels]
+        #decoded_labels = self.tokenizer.batch_decode(batch['labels'], skip_special_tokens=True, forced_bos_token_id=self.tokenizer.lang_code_to_id[self.lang_code])
+        #decoded_labels_bleu = [[label] for label in decoded_labels]
         
         # Remove -100 indices (labels for padding tokens)
-        decoded_labels = [label.replace(self.tokenizer.pad_token, '') for label in decoded_labels]
+        #decoded_labels = [label.replace(self.tokenizer.pad_token, '') for label in decoded_labels]
 
-        test_pairs_batch = [(pred_sentence.strip(), gold_sentence.strip()) for pred_sentence, gold_sentence in zip(decoded_preds, decoded_labels)]
+        test_pairs_batch = [pred_sentence.strip() for pred_sentence in decoded_preds]
         self.test_pairs.extend(test_pairs_batch)
 
     def on_test_epoch_end(self):
         print("Generating predictions")
         with open(self.output_path, 'w') as f:
             for test_pair in self.test_pairs:
-                f.write(test_pair[0]+'\n')
+                f.write(test_pair+'\n')
         
 
     def configure_optimizers(self):

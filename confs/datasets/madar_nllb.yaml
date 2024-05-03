@@ -1,6 +1,6 @@
 defaults:
   - base
-train_files: ['./dataset/train/madar/train_madar#acm_Arab.tsv', './dataset/train/madar/train_madar#acq_Arab.tsv', './dataset/train/madar/train_madar#aeb_Arab.tsv', './dataset/train/madar/train_madar#ajp_Arab.tsv', './dataset/train/madar/train_madar#apc_Arab.tsv', './dataset/train/madar/train_madar#ars_Arab.tsv', './dataset/train/madar/train_madar#ary_Arab.tsv', './dataset/train/madar/train_madar#arz_Arab.tsv', './dataset/train/madar/train_madar#knc_Arab.tsv']
-val_files: ['./dataset/train/madar/val_madar#acm_Arab.tsv', './dataset/train/madar/val_madar#acq_Arab.tsv', './dataset/train/madar/val_madar#aeb_Arab.tsv', './dataset/train/madar/val_madar#ajp_Arab.tsv', './dataset/train/madar/val_madar#apc_Arab.tsv', './dataset/train/madar/val_madar#ars_Arab.tsv', './dataset/train/madar/val_madar#ary_Arab.tsv', './dataset/train/madar/val_madar#arz_Arab.tsv', './dataset/train/madar/val_madar#knc_Arab.tsv']
-test_files: ['./dataset/val/UBC_subtask3_dev_1#ajp_Arab.txt','./dataset/val/UBC_subtask3_dev_1#ars_Arab.txt', './dataset/val/UBC_subtask3_dev_1#arz_Arab.txt']
+train_files: ['./dataset/train/madar/train_flores200_madar#arz_Arab.tsv', './dataset/train/madar/train_flores200_madar#ars_Arab.tsv', './dataset/train/madar/train_flores200_madar#ajp_Arab.tsv']
+val_files: ['./dataset/train/madar/val_flores200_madar#arz_Arab.tsv', './dataset/train/madar/val_flores200_madar#ars_Arab.tsv', './dataset/train/madar/val_flores200_madar#ajp_Arab.tsv']
+test_files: ['./dataset/val/UBC_subtask3_dev_1#arz_Arab.txt','./dataset/val/UBC_subtask3_dev_1#ars_Arab.txt', './dataset/val/UBC_subtask3_dev_1#ajp_Arab.txt']
 target_lang: arb_Arab
