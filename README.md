@@ -24,3 +24,6 @@ To evaluate your prediction you can just run like this
 cd dataset
 python eval_score.py ./val/NADI2024_subtask3_dev2_GOLD.txt ./predictions/nllb_madar_dev2.txt ./val/UBC_subtask3_dev_2.txt
 ```
+
+# Checkpoints
+To download our model checkpoints, you can download them [here](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/mahardika_ihsani_mbzuai_ac_ae/EjqbeoMa5gRFlo8fI0tr_NMBstp4LKMYBtHF2jInfWgY4A?e=79RVeb).
